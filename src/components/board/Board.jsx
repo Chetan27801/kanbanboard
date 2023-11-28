@@ -37,44 +37,37 @@ const Board = () => {
 							>
 								<div className="board_cardHead">
 									<div style={{ display: "flex", alignItems: "center" }}>
-										{!user ? (
-											<>
-												{elmTit === "Urgent" && (
-													<FaExclamation style={{ marginRight: "2" }} />
-												)}
-												{elmTit === "High" && (
-													<MdSignalCellularAlt style={{ marginRight: "2" }} />
-												)}
-												{elmTit === "Medium" && (
-													<MdSignalCellularAlt2Bar
-														style={{ marginRight: "2" }}
-													/>
-												)}
-												{elmTit === "Low" && (
-													<MdSignalCellularAlt1Bar
-														style={{ marginRight: "2" }}
-													/>
-												)}
-												{elmTit === "No priority" && (
-													<HiOutlineDotsHorizontal />
-												)}
-												{elmTit === "Todo" && (
-													<PiCircleDashedBold style={{ marginRight: "2" }} />
-												)}
-												{elmTit === "In progress" && (
-													<BsCircleHalf style={{ marginRight: "2" }} />
-												)}
-												{elmTit === "Done" && (
-													<IoMdDoneAll style={{ marginRight: "2" }} />
-												)}
-												{elmTit === "Backlog" && (
-													<GoStack style={{ marginRight: "2" }} />
-												)}
-												{elmTit === "Cancelled" && (
-													<FcCancel style={{ marginRight: "2" }} />
-												)}
-											</>
-										) : (
+										<>
+											{elmTit === "Urgent" && (
+												<FaExclamation style={{ marginRight: "2" }} />
+											)}
+											{elmTit === "High" && (
+												<MdSignalCellularAlt style={{ marginRight: "2" }} />
+											)}
+											{elmTit === "Medium" && (
+												<MdSignalCellularAlt2Bar style={{ marginRight: "2" }} />
+											)}
+											{elmTit === "Low" && (
+												<MdSignalCellularAlt1Bar style={{ marginRight: "2" }} />
+											)}
+											{elmTit === "No priority" && <HiOutlineDotsHorizontal />}
+											{elmTit === "Todo" && (
+												<PiCircleDashedBold style={{ marginRight: "2" }} />
+											)}
+											{elmTit === "In progress" && (
+												<BsCircleHalf style={{ marginRight: "2" }} />
+											)}
+											{elmTit === "Done" && (
+												<IoMdDoneAll style={{ marginRight: "2" }} />
+											)}
+											{elmTit === "Backlog" && (
+												<GoStack style={{ marginRight: "2" }} />
+											)}
+											{elmTit === "Cancelled" && (
+												<FcCancel style={{ marginRight: "2" }} />
+											)}
+										</>
+										{user && (
 											<>
 												<div className="board_image">
 													<img src={proimg} alt="profile" />
