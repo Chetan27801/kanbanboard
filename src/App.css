@@ -1,0 +1,20 @@
+* {
+	margin: 0;
+	padding: 0;
+	block-size: border-box;
+	font-family: "Montserrat", sans-serif;
+	background-color: whitesmoke;
+}
+
+:root {
+	--boardwhite: #f4f5f8;
+	--boardblack: #000;
+
+	--purewhite: #ffffff;
+
+	--txtgrey: #6b6f76;
+
+	--avlgrey: #bec2c8;
+	--g1: #868a90;
+	--g2: #dfe4e9;
+}
