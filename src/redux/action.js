@@ -16,7 +16,6 @@ export const fetchData = () => async (dispatch) => {
 
 export const dataSelect = (group, tickets, order) => async (dispatch) => {
 	try {
-		console.log(group, tickets, order);
 		dispatch({ type: "dataSelectRequest" });
 
 		let user = false;
@@ -62,7 +61,6 @@ export const dataSelect = (group, tickets, order) => async (dispatch) => {
 					},
 				});
 			});
-			console.log(dataSelected);
 		} else {
 			let priorityList = ["Urgent", "High", "Medium", "Low", "No priority"];
 
@@ -86,7 +84,6 @@ export const dataSelect = (group, tickets, order) => async (dispatch) => {
 			});
 		}
 
-		console.log(dataSelected);
 		dispatch({ type: "dataSelectSuccess", payload: { dataSelected, user } });
 	} catch (error) {
 		dispatch({ type: "dataSelectFailure", payload: error.message });

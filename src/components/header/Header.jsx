@@ -8,7 +8,7 @@ const getGroup = () => {
 	if (localStorage.getItem("group")) {
 		return localStorage.getItem("group");
 	} else {
-		return "status";
+		return "user";
 	}
 };
 
